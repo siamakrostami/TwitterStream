@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q7H-9U-78l">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Twitter Stream-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TweetsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TweetsListViewController" customModule="SRSnappAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qn7-3Z-THj" userLabel="Textfield View">
+                                <rect key="frame" x="10.5" y="156" width="393" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Rule Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPw-Wh-f1d">
+                                        <rect key="frame" x="19.5" y="2.5" width="354" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="EPw-Wh-f1d" firstAttribute="centerY" secondItem="qn7-3Z-THj" secondAttribute="centerY" id="3db-IQ-pNC"/>
+                                    <constraint firstItem="EPw-Wh-f1d" firstAttribute="height" secondItem="qn7-3Z-THj" secondAttribute="height" multiplier="0.9" id="7BI-2O-mCv"/>
+                                    <constraint firstItem="EPw-Wh-f1d" firstAttribute="centerX" secondItem="qn7-3Z-THj" secondAttribute="centerX" id="7c6-rM-dot"/>
+                                    <constraint firstItem="EPw-Wh-f1d" firstAttribute="width" secondItem="qn7-3Z-THj" secondAttribute="width" multiplier="0.9" id="CXk-qb-fjM"/>
+                                    <constraint firstAttribute="height" constant="50" id="FXL-rL-G6c"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-Kk-85M">
+                                <rect key="frame" x="10.5" y="214" width="393" height="648"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TUe-Kk-85M" firstAttribute="centerX" secondItem="qn7-3Z-THj" secondAttribute="centerX" id="1tO-zW-Bmh"/>
+                            <constraint firstItem="TUe-Kk-85M" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.95" id="6YI-Mc-NtM"/>
+                            <constraint firstItem="qn7-3Z-THj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Gih-e9-Jca"/>
+                            <constraint firstItem="TUe-Kk-85M" firstAttribute="top" secondItem="qn7-3Z-THj" secondAttribute="bottom" constant="8" id="Lci-7U-4Jq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TUe-Kk-85M" secondAttribute="bottom" id="VVy-Uk-IHD"/>
+                            <constraint firstItem="qn7-3Z-THj" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="nfH-3o-772"/>
+                            <constraint firstItem="qn7-3Z-THj" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.95" id="uE0-4P-7lz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Twitter Stream" id="y6A-tT-qrM"/>
+                    <connections>
+                        <outlet property="ruleTextfield" destination="EPw-Wh-f1d" id="ErN-DG-6Db"/>
+                        <outlet property="textfieldView" destination="qn7-3Z-THj" id="3PM-ud-XTk"/>
+                        <outlet property="tweetsTableView" destination="TUe-Kk-85M" id="J5y-gS-YJU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="80.357142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T8g-Hz-dEC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q7H-9U-78l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="z8n-PV-GIK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="D13-3D-ITR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7k-Iz-vM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
