@@ -1,7 +1,7 @@
 
-# SRSnappAssignment
+# TwitterStream
 
-Snapp's assingment task for filtering live tweets from twitter streaming api.
+An application for filtering live tweets from twitter streaming api.
 
 
 ## About
